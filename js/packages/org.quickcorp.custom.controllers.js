@@ -1,5 +1,16 @@
 'use strict';
 Package('org.quickcorp.custom.controllers',[
+  Class('PWAController',Object,{
+		component:null,
+		_new_:function (o){
+			logger.debug('PWAController Element Initialized');
+			this.component = o.component;
+		},
+		done: function (){
+			document.head.innerHTML+=this.component.body.innerHTML;
+			this.component.body.innerHTML="";
+		}
+	}),
   Class('SideNavController',Object,{
   dependencies:[],
   component:null,
