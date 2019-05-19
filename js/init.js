@@ -20,10 +20,5 @@ Component.cached=true;
 Import('org.quickcorp.custom');
 
 Ready(function() {
-    window.onpopstate = function (event) {
-        event.stopImmediatePropagation();
-        event.stopPropagation();
-        Component.route();
-    }
 
 });
