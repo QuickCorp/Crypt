@@ -40,7 +40,7 @@ var Installer = function (root) {
         return true;
     };
 
-    window.addEventListener('beforeinstallprompt', beforeinstallprompt,false);
+    window.addEventListener('beforeinstallprompt', beforeinstallprompt);
     window.addEventListener('appinstalled', installed,false);
 
     root.addEventListener('click', install.bind(this));
