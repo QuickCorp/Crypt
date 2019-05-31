@@ -91,7 +91,11 @@ self.addEventListener('install', e => {
         'https://sdk.qcobjects.dev/js/org.quickcorp.tools.canvas.js',
         'https://sdk.qcobjects.dev/js/org.quickcorp.tools.layouts.js'
       ])
-          .then(() => self.skipWaiting());
+          .then(() => self.skipWaiting()).catch(function (e){
+            console.log('error loading sw');
+            console.log(e);
+
+          });
     })
   );
 });
