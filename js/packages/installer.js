@@ -36,6 +36,7 @@ var Installer = function (root) {
         promptEvent = e;
         promptEvent.preventDefault();
         root.classList.add('available');
+        root.style.opacity=1;
         return false;
     };
 
