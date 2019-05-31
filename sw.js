@@ -106,9 +106,9 @@ self.addEventListener('fetch', event => {
       .then(cache => cache.match(event.request, {ignoreSearch: true}))
       .then(response => {
       return response || fetch(event.request);
-    }).catch(e){
+    }).catch(function (e){
       console.log('error in cache of service worker');
       console.log(e);
-    }
+    })
   );
 });
