@@ -37,7 +37,7 @@ var Installer = function (root) {
         promptEvent.preventDefault();
         root.classList.add('available');
         root.style.opacity=1;
-        return false;
+        return true;
     };
 
     window.addEventListener('beforeinstallprompt', beforeinstallprompt,false);
