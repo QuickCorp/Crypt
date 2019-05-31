@@ -33,7 +33,6 @@ self.addEventListener('install', e => {
         '/',
         '/manifest.json',
         '/favicon.ico',
-        '/index.html',
         '/css/desktop/content.css',
         '/css/desktop/container.css',
         '/css/desktop/navbar.css',
