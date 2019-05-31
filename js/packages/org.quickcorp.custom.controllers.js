@@ -11,6 +11,21 @@ Package('org.quickcorp.custom.controllers',[
 			this.component.body.innerHTML="";
 		}
 	}),
+  Class('HeaderController',Controller,{
+    dependencies:[],
+    component:null,
+    installer:null,
+    loadInstallerButton:function (){
+      this.installer = new Installer(this.component.body.subelements('#installerbutton')[0]);
+    },
+    _new_:function (o){
+      this.__new__(o);
+      //TODO: Implement
+    },
+    done: function (){
+      this.loadInstallerButton();
+    }
+  }),  
   Class('SideNavController',Object,{
   dependencies:[],
   component:null,
