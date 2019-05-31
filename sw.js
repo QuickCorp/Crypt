@@ -42,6 +42,7 @@ self.addEventListener('install', e => {
         '/css/codemirror/codemirror.css',
         'https://sdk.qcobjects.dev/css/basic-layout.css',
         'https://qcobjects.dev/QCObjects.js',
+        'https://sdk.qcobjects.dev/QCObjects-SDK.js',
         '/js/packages/codemirror/matchbrackets.js',
         '/',
         '/index.html',
