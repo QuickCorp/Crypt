@@ -17,6 +17,8 @@ Package('org.quickcorp.custom.controllers',[
     component:null,
     installer:null,
     loadInstallerButton:function (){
+      logger.debug('Loading installer button');
+      this.component.body.subelements('#installerbutton')[0].style.opacity=0;
       this.installer = new Installer(this.component.body.subelements('#installerbutton')[0]);
     },
     _new_:function (o){
