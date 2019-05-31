@@ -31,8 +31,6 @@ self.addEventListener('install', e => {
     caches.open(cacheName).then(cache => {
       return cache.addAll([
         '/js/packages/installer.js',
-        '/manifest.json',
-        '/favicon.ico',
         '/img/icons/icon-192x192.png',
         '/js/packages/codemirror/javascript.js',
         '/js/packages/codemirror/active-line.js',
@@ -40,19 +38,10 @@ self.addEventListener('install', e => {
         '/css/form.css',
         '/css/codemirror/blackboard.css',
         '/css/codemirror/codemirror.css',
-        'https://sdk.qcobjects.dev/css/basic-layout.css',
-        'https://qcobjects.dev/QCObjects.js',
-        'https://sdk.qcobjects.dev/QCObjects-SDK.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.models.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.models.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.components.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.controllers.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.views.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.effects.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.tools.canvas.js',
-        'https://sdk.qcobjects.dev/js/org.quickcorp.tools.layouts.js',
         '/js/packages/codemirror/matchbrackets.js',
         '/',
+        '/manifest.json',
+        '/favicon.ico',
         '/index.html',
         '/css/desktop/content.css',
         '/css/desktop/container.css',
@@ -89,7 +78,18 @@ self.addEventListener('install', e => {
         '/templates/components/nav.tpl.html',
         '/templates/components/footer.tpl.html',
         '/templates/components/header.tpl.html',
-        '/templates/components/pages/page1.tpl.html'
+        '/templates/components/pages/page1.tpl.html',
+        'https://sdk.qcobjects.dev/css/basic-layout.css',
+        'https://qcobjects.dev/QCObjects.js',
+        'https://sdk.qcobjects.dev/QCObjects-SDK.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.models.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.models.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.components.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.controllers.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.views.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.effects.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.tools.canvas.js',
+        'https://sdk.qcobjects.dev/js/org.quickcorp.tools.layouts.js'
       ])
           .then(() => self.skipWaiting());
     })
