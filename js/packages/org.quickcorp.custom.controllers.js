@@ -1,4 +1,5 @@
 'use strict';
+Import('installer');
 Package('org.quickcorp.custom.controllers',[
   Class('PWAController',Object,{
 		component:null,
@@ -25,7 +26,7 @@ Package('org.quickcorp.custom.controllers',[
     done: function (){
       this.loadInstallerButton();
     }
-  }),  
+  }),
   Class('SideNavController',Object,{
   dependencies:[],
   component:null,
