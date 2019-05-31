@@ -30,6 +30,7 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([
+        '/js/packages/installer.js',
         '/manifest.json',
         '/favicon.ico',
         '/img/icons/icon-192x192.png',
