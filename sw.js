@@ -24,7 +24,7 @@
 */
 "use strict";
 const version = "0.0.1";
-const appName = "Crypt";
+const appName = "config.qcobjects";
 const cacheName = `qcobjects-qpp-${appName}-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(
