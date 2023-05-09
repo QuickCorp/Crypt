@@ -91,17 +91,20 @@ Package('org.quickcorp.custom.controllers',[
       delete this.component.fieldType;
       this.component.createBindingEvents();
       Tag('textarea[codemirror]').map((element)=>{
-        controller.editor = CodeMirror.fromTextArea(element, {
-          lineNumbers: true,
-          styleActiveLine: true,
-          matchBrackets: true
-        });
-//        controller.editor.setOption("theme", "blackboard");
-        controller.editor.setOption("mode","javascript");
-        controller.editor.on('change',function (editor){
-          controller.component.executeBindings();
-          controller.component.data.content = editor.getValue();
-        })
+				if (element instanceof HTMLTextAreaElement){
+					controller.editor = CodeMirror.fromTextArea(element, {
+						lineNumbers: true,
+						styleActiveLine: true,
+						matchBrackets: true
+					});
+				//        controller.editor.setOption("theme", "blackboard");
+					controller.editor.setOption("mode","javascript");
+					controller.editor.on('change',function (editor){
+						controller.component.executeBindings();
+						controller.component.data.content = editor.getValue();
+					})
+
+				}
       });
     },
     submit:function (){
